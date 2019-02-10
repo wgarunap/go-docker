@@ -1,0 +1,4 @@
+package: github.com/wgarunap/go-docker
+import:
+- package: github.com/google/uuid
+  version: 1.0.0
