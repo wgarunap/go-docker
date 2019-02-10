@@ -1,14 +1,14 @@
-package main
+package config
 
 import (
-	"fmt"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"log"
 )
 
 type Conf struct {
-	DebugPort int `yaml:"debug_port"`
+	DebugPort   int `yaml:"debug_port"`
+	MetricsPort int `yaml:"metrics_port"`
 }
 
 var Config Conf
@@ -19,15 +19,8 @@ func init() {
 		log.Fatal(err)
 	}
 
-
-	//f,err:=os.Open(`config/config.yaml`)
-	//defer f.Close()
-	//if err!=nil{
-	//	log.Fatal(err)
-	//}
-	err=yaml.UnmarshalStrict(b,&Config)
+	err = yaml.UnmarshalStrict(b, &Config)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(Config.DebugPort)
 }

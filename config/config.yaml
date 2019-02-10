@@ -1,1 +1,2 @@
 debug_port: 10001
+metrics_port: 20001

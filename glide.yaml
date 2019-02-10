@@ -1,4 +1,7 @@
 package: github.com/wgarunap/go-docker
 import:
-- package: github.com/google/uuid
-  version: 1.0.0
+- package: github.com/tecbot/gorocksdb
+  version: 3e476152774442234f9a9f747386a48a1d82a515
+
+- package: gopkg.in/yaml.v2
+  version: ~2.2

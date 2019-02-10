@@ -106,6 +106,7 @@ ENV TZ Asia/Colombo
 RUN apk add --no-cache tzdata
 
 # SSH must not transfer using ARG or ENV
+# This can be visible in the docker images history
 ARG SSH_KEY
 
 RUN apk add --update --no-cache openssh-client
